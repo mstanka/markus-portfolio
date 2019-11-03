@@ -1,0 +1,111 @@
+.projects {
+  padding-bottom: 2rem;
+
+  &__bio-image {
+    height: 30vh;
+    width: 100%;
+    background: 
+      linear-gradient(
+        to right,
+        rgba($secondary-color, .4),
+        rgba($secondary-color, .1)
+      ),  
+      url(../img/markus.jpg) center center/cover;  
+      // Image by <a href="https://pixabay.com/photos/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1209947">Free-Photos</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1209947">Pixabay</a>
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    .text-secondary {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__items {
+    width: 60vw;
+    margin: 2rem auto 0 auto;
+    display:-grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem; 
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 2rem;
+    border-bottom: 5px solid $secondary-color;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: $secondary-color;
+      opacity: 0;
+      @include transition-ease;
+    }
+
+    &:hover {
+      &::after {
+        top: 0;
+        opacity: .9;
+      }
+
+      .projects__btn {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__btns {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
+  }
+
+  &__btn {
+    opacity: 0;
+    color: $light-color;
+    @include transition-ease;
+
+    &:hover {
+      color: $primary-color;
+    }
+
+    i {
+      padding-right: .5rem;
+    }
+  } 
+
+  .social-icons {
+    position: relative;
+    padding-top: 4rem;
+    left: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  footer {
+    position: relative; 
+    right: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+}
+

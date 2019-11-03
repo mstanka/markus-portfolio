@@ -1,0 +1,72 @@
+.about {
+  padding-bottom: 2rem;
+
+  &__bio-image {
+    height: 50vh;
+    width: 100%;
+    background: 
+      linear-gradient(
+        to right,
+        rgba($secondary-color, .4),
+        rgba($secondary-color, .1)
+      ),  
+      url(../img/markus.jpg) center center/cover;  
+      // Image by <a href="https://pixabay.com/photos/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1209947">Free-Photos</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1209947">Pixabay</a>
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &-bio {
+    width: 80%;
+    text-align: center;
+
+    .text-secondary {
+      padding-bottom: 1rem;
+    }
+  }
+
+  .jobs {
+    width: 80vw;
+    margin: 2rem auto 0 auto;
+    display:-grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+
+    &__job {
+      background: lighten($primary-color, 10%);
+      padding: 2rem;
+      border-bottom: 5px solid $secondary-color;
+      margin-bottom: 2rem;
+
+      h2, h3 {
+        margin: .5rem 0;
+      }
+
+      h6 {
+        margin: .3rem 0;
+        font-size: 2rem;
+      }
+    }
+  }
+ 
+  .social-icons {
+    position: relative;
+    padding-top: 2rem;
+    left: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  footer {
+    position: relative; 
+    right: 0;
+    display: flex;
+    justify-content: center;
+  }
+}

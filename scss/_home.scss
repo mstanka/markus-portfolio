@@ -1,0 +1,30 @@
+.home {
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  background: 
+    linear-gradient(
+      to right,
+      rgba($secondary-color, .4),
+      rgba($secondary-color, .1)
+    ),  
+    url(../img/markus.jpg) center center/cover;  
+    // Image by <a href="https://pixabay.com/photos/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1209947">Free-Photos</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1209947">Pixabay</a>
+
+    &__name {
+      font-size: 5rem;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid $light-color;
+
+      &--last {
+        color: $secondary-color;
+        font-weight: 700;
+      }
+  }
+}
+
+
+
